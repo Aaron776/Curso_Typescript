@@ -10,3 +10,5 @@ var Planet={
 
 console.log(Planet) // aquio imprimo todo el objeto
 console.log(Planet.name); // aqui imprimo el valor del atributo name
+
+

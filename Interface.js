@@ -30,7 +30,7 @@ var personas = [
         direccion: "El Valle de los Chillos"
     }
 ];
-// Podemos reccorrer un arreglo de un tipo de interface con un forEach o un for in u un fort of
+// Podemos reccorrer un arreglo de un tipo de interface con un forEach o un for in u un for of
 personas.forEach(function (x) {
     console.log(x); // imprime todo el objeto
     console.log(x.nombre); // aqui imprimo el valor del campo nombre
@@ -44,7 +44,7 @@ for (var _i = 0, personas_1 = personas; _i < personas_1.length; _i++) {
     console.log(item); // imprimo todo el objeto
     console.log(item.nombre); // imprimo el valor del campo nombre
 }
-// Igualmente podemos crear funciones que devuelva el tipo de interface que creamos
+// Igualmente podemos crear funciones que devuelva o retorne una variable del tipo de interface que creamos o retorne un objeto de ese tipo de interface
 function crearPersona() {
     return {
         nombre: "Raul",
@@ -53,5 +53,15 @@ function crearPersona() {
         direccion: "El Triangulo"
     };
 }
+function sujeto() {
+    var persona = {
+        nombre: "Julio",
+        apellido: "Jaramillo",
+        edad: 45,
+        direccion: "Carapungo"
+    };
+    return persona;
+}
 // Aqui imprimo el valor de la funcion que creamos
 console.log(crearPersona());
+console.log(sujeto());

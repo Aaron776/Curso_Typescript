@@ -15,7 +15,7 @@ interface Persona{
 interface LicenciaConducir{
     fechaExpiracion:string;
     lugarNacimiento:string;
-    datosPersonales:Persona; // Aqui podemos definir un campo que sera de tipo interface dentro de otra interface
+    datosPersonales:Persona; // Aqui podemos definir un campo que sera de tipo interface dentro de otra interface o sea que tendra los atrobutos de esa interface
 }
 
 
@@ -62,7 +62,7 @@ let cedula1:Cedula = {
     ]
 
 
-// Podemos reccorrer un arreglo de un tipo de interface con un forEach o un for in u un fort of
+// Podemos reccorrer un arreglo de un tipo de interface con un forEach o un for in u un for of
 personas.forEach(x => {
     console.log(x) // imprime todo el objeto
     console.log(x.nombre) // aqui imprimo el valor del campo nombre
@@ -80,7 +80,7 @@ for(let item of personas){
 }
 
 
-// Igualmente podemos crear funciones que devuelva el tipo de interface que creamos
+// Igualmente podemos crear funciones que devuelva o retorne una variable del tipo de interface que creamos o retorne un objeto de ese tipo de interface
 function crearPersona():Persona{
     return {
         nombre:"Raul",
@@ -90,5 +90,17 @@ function crearPersona():Persona{
     }
 }
 
+function sujeto():Persona{
+    let persona:Persona={
+        nombre:"Julio",
+        apellido:"Jaramillo",
+        edad:45,
+        direccion:"Carapungo"
+    }
+    return persona
+}
+
+
 // Aqui imprimo el valor de la funcion que creamos
 console.log(crearPersona())
+console.log(sujeto())

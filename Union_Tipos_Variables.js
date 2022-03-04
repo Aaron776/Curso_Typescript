@@ -5,3 +5,8 @@ var edad; // en este caso la variable edad puede ser un numero, un string o un b
 edad = 20;
 edad = "25";
 edad = true;
+function saludar(hola) {
+    return (hola);
+}
+console.log(saludar("Aaron"));
+console.log(saludar(false));

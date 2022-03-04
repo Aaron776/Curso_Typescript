@@ -1,6 +1,17 @@
 /* Una interface en typescript son modelos que construimos de datos para que puedan ser usadas son algo muy parecidas a las clases en otros lenguajes de programacion
 Una interface permite definir la forma de la data con la que vamos a trabajar
 */
+var licencia1 = {
+    fechaExpiracion: "21/11/21",
+    lugarNacimiento: "Quito",
+    datosPersonales: {
+        nombre: "Aaron",
+        apellido: "Ortiz",
+        edad: 25,
+        direccion: "El Valle de los Chillos",
+        mascotas: ["snoopy", "Toby"]
+    }
+};
 // Una vez definido la interface podemos crear una variable o un objeto del tipo de la interface que creamos y ese obejto podra tener los atributos de la interface que definimos anteriormenete, el obejto que es del tipop de una interface debe tener todos los atributos de esa interface para que no haya errores
 var persona = {
     nombre: "Juan",
@@ -37,12 +48,15 @@ personas.forEach(function (x) {
     console.log(x.apellido); // aqui imprimo el valor del campo apellido
 });
 for (var item in persona) {
-    console.log(persona[item]);
+    console.log("Los valores del objeto persona son: " + persona[item]);
 }
-for (var _i = 0, personas_1 = personas; _i < personas_1.length; _i++) {
+for (var _i = 0, personas_1 = personas; _i < personas_1.length; _i++) { // el for of es usado para recorrer un arreglo de obejtos unicamente y no se deja usar para recorrer un solo objeto
     var item = personas_1[_i];
     console.log(item); // imprimo todo el objeto
     console.log(item.nombre); // imprimo el valor del campo nombre
+}
+for (var item in licencia1) {
+    console.log("Los valores del objeto licencia1 son: " + licencia1[item]);
 }
 // Igualmente podemos crear funciones que devuelva o retorne una variable del tipo de interface que creamos o retorne un objeto de ese tipo de interface
 function crearPersona() {

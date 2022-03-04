@@ -6,3 +6,11 @@ let edad:number|string|boolean; // en este caso la variable edad puede ser un nu
 edad = 20;
 edad = "25";
 edad = true;
+
+
+function saludar(hola:string|boolean){
+    return (hola)
+}
+
+console.log(saludar("Aaron"))
+console.log(saludar(false))

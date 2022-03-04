@@ -18,6 +18,19 @@ interface LicenciaConducir{
     datosPersonales:Persona; // Aqui podemos definir un campo que sera de tipo interface dentro de otra interface o sea que tendra los atrobutos de esa interface
 }
 
+var licencia1:LicenciaConducir={
+    fechaExpiracion:"21/11/21",
+    lugarNacimiento:"Quito",
+    datosPersonales:{
+        nombre:"Aaron",
+        apellido:"Ortiz",
+        edad:25,
+        direccion:"El Valle de los Chillos",
+        mascotas:["snoopy","Toby"]
+    }
+
+}
+
 
 // Una vez definido la interface podemos crear una variable o un objeto del tipo de la interface que creamos y ese obejto podra tener los atributos de la interface que definimos anteriormenete, el obejto que es del tipop de una interface debe tener todos los atributos de esa interface para que no haya errores
 let persona:Persona = {
@@ -28,6 +41,7 @@ let persona:Persona = {
 }
 
 
+//Herencia de Interfaces
 // Tambien podemos crear una intergace la cual se extienda o tenda los atributos de otra interface de la interface
 interface Cedula extends Persona{ // Esta interface hereda los atributos de la interface Persona esto quiere decir que si creamos un objeto de esta interface tendra que tener los atributos de la interface Persona y los atributos de esta otra interface
     ci:string
@@ -71,12 +85,17 @@ personas.forEach(x => {
 })
 
 for(let item in persona){
-    console.log(persona[item])
+    console.log("Los valores del objeto persona son: "+persona[item])
 }
 
-for(let item of personas){
+for(let item of personas){ // el for of es usado para recorrer un arreglo de obejtos unicamente y no se deja usar para recorrer un solo objeto
     console.log(item) // imprimo todo el objeto
     console.log(item.nombre) // imprimo el valor del campo nombre
+}
+
+for(let item in licencia1){
+    console.log("Los valores del objeto licencia1 son: "+licencia1[item])
+    
 }
 
 

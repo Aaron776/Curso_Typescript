@@ -1,4 +1,4 @@
-// Las funciuones felcha son una forma de reducir codigo al crear una funcion de
+// Las funciuones felcha son una forma de reducir codigo al crear una funcion normal, normalmente para que una funcion felcha se ejecute o muestre un resultado se debe guardar dentro de una variable
  
 // Función tradicional
 function suma (a){

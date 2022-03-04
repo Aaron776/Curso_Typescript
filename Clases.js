@@ -17,7 +17,7 @@ var __extends = (this && this.__extends) || (function () {
 // Para declarar una clase usamos la plabara class seguyido de un nombre de la llave y entre las llavaes ponemos el cofdigo que querramos
 // Toda clase que creamos debe tener un metodo constructor
 var Empleado = /** @class */ (function () {
-    //Constructor: Nos sirve para cuando vayamos a crear un un objeto de la clase nos permite inicializar
+    //Constructor: Nos sirve para cuando vayamos a crear un un objeto de la clase nos permite inicializar los valores con los cuales la clase va a trabajar
     function Empleado(id, nombre, apellido, areaTrabajo, sueldo) {
         this.id = id;
         this.nombre = nombre;
@@ -53,6 +53,9 @@ var Persona = /** @class */ (function (_super) {
     function Persona() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    /*constructor(){  // cuando se crea un constructor en una clase que se extiende de otra clase se debe crear un metodo super con los datos del contructor de la otra clase
+        super("2","Patricio","Alban","Economia",1000)
+    }*/
     Persona.prototype.despedir = function () {
         console.log("Me despido de ti " + this.nombre);
     };
@@ -60,3 +63,20 @@ var Persona = /** @class */ (function (_super) {
 }(Empleado));
 var persona1 = new Persona("2", "Patricio", "Alban", "Economia", 1000); // como esta clase Persona es una extension de la clase Empleado el constructor de esta va a ser la misma que en la clase Empleado por ende cuando creemos un objeto de esta clase Persona tendremos que llenar los datos enn el parentesis con el cotructor de la clase Empleado
 persona1.despedir();
+var matrimonio = /** @class */ (function () {
+    function matrimonio(fechaExp, estadoCivil, numeroHijos) {
+        this.fechaExp = fechaExp;
+        this.estadoCivil = estadoCivil;
+        this.numeroHijos = numeroHijos;
+    }
+    matrimonio.prototype.fechaDeExpiracionMatrimonio = function () {
+        console.log(this.fechaExp);
+    };
+    matrimonio.prototype.cantidadHijosADesear = function (numeroHijosQuisiera) {
+        console.log(numeroHijosQuisiera - this.numeroHijos);
+    };
+    return matrimonio;
+}());
+var matrimonio1 = new matrimonio("12/01/12", "casado", 5);
+matrimonio1.cantidadHijosADesear(7);
+matrimonio1.fechaDeExpiracionMatrimonio();

@@ -10,7 +10,7 @@
      areaTrabajo:string;
      sueldo:number;
 
-     //Constructor: Nos sirve para cuando vayamos a crear un un objeto de la clase nos permite inicializar
+     //Constructor: Nos sirve para cuando vayamos a crear un un objeto de la clase nos permite inicializar los valores con los cuales la clase va a trabajar
         constructor(id:string,nombre:string,apellido:string,areaTrabajo:string,sueldo:number){
             this.id=id;
             this.nombre=nombre;
@@ -56,6 +56,9 @@ empleado1.sueldoTotal()
 
 // Extension de Clases es cuando una clase hereda  los atributos o metodos de otra clase o sea que puede usar esos atributos o metodos
 class Persona extends Empleado{ 
+    /*constructor(){  // cuando se crea un constructor en una clase que se extiende de otra clase se debe crear un metodo super con los datos del contructor de la otra clase
+        super("2","Patricio","Alban","Economia",1000)
+    }*/
     despedir(){
         console.log("Me despido de ti "+this.nombre)
     }
@@ -64,3 +67,37 @@ class Persona extends Empleado{
 
 const persona1=new Persona("2","Patricio","Alban","Economia",1000) // como esta clase Persona es una extension de la clase Empleado el constructor de esta va a ser la misma que en la clase Empleado por ende cuando creemos un objeto de esta clase Persona tendremos que llenar los datos enn el parentesis con el cotructor de la clase Empleado
 persona1.despedir() 
+
+
+
+// En una Clase se puede implementar una interfaces usando la plabara implements
+interface cedula{
+fechaExp:string,
+estadoCivil:string
+} 
+
+class matrimonio implements cedula{ // esta clase que implementa una interface debe tener los atributos de esa interface para no dar un error
+    fechaExp:string
+    estadoCivil:string
+    numeroHijos:number
+
+    constructor( fechaExp:string,estadoCivil:string,numeroHijos:number){
+        this.fechaExp=fechaExp;
+        this.estadoCivil=estadoCivil;
+        this.numeroHijos=numeroHijos;
+
+    }
+
+    fechaDeExpiracionMatrimonio(){
+        console.log(this.fechaExp)
+    }
+
+    cantidadHijosADesear(numeroHijosQuisiera:number){
+        console.log(numeroHijosQuisiera-this.numeroHijos)
+
+    }
+}
+
+let matrimonio1=new matrimonio("12/01/12","casado",5);
+matrimonio1.cantidadHijosADesear(7)
+matrimonio1.fechaDeExpiracionMatrimonio()

@@ -1,0 +1,22 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Alias.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aaron776/Curso_Typescript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aaron776/Curso_Typescript/issues"
+  },
+  "homepage": "https://github.com/Aaron776/Curso_Typescript#readme",
+  "dependencies": {
+    "typescript": "^4.6.2"
+  }
+}

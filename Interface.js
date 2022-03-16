@@ -13,18 +13,20 @@ var licencia1 = {
     }
 };
 // Una vez definido la interface podemos crear una variable o un objeto del tipo de la interface que creamos y ese obejto podra tener los atributos de la interface que definimos anteriormenete, el obejto que es del tipop de una interface debe tener todos los atributos de esa interface para que no haya errores
-var persona = {
+var persona1 = {
     nombre: "Juan",
     apellido: "Perez",
     edad: 25,
-    direccion: "Calle 123"
+    direccion: "Calle 123",
+    mascotas: ["Mickey", "Toby"]
 };
 var cedula1 = {
     ci: "1725159684",
     nombre: "Fernando",
     apellido: "Fuertes",
     edad: 25,
-    direccion: "El Triangulo"
+    direccion: "El Triangulo",
+    mascotas: ["Mickey", "Toby"]
 };
 //Igualemnte podremos crear arreglos de un tipo de interface
 var personas = [
@@ -47,8 +49,8 @@ personas.forEach(function (x) {
     console.log(x.nombre); // aqui imprimo el valor del campo nombre
     console.log(x.apellido); // aqui imprimo el valor del campo apellido
 });
-for (var item in persona) {
-    console.log("Los valores del objeto persona son: " + persona[item]);
+for (var item in persona1) {
+    console.log("Los valores del objeto persona son: " + persona1[item]);
 }
 for (var _i = 0, personas_1 = personas; _i < personas_1.length; _i++) { // el for of es usado para recorrer un arreglo de obejtos unicamente y no se deja usar para recorrer un solo objeto
     var item = personas_1[_i];

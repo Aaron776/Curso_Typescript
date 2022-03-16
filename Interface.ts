@@ -4,7 +4,7 @@ Una interface permite definir la forma de la data con la que vamos a trabajar
 
 // Para definir una interface en typescript se usa la palabra interface seguida del nombre de la interface y seguido de las llaves y dentro de las llaves se definen los atributos que va a tener la interface y de que tipo de dato van a ser, ademas en las interfaces podemos crear funciones o metodos
 interface Persona{
-    nombre?:string; // ? significa que este atributo es opcional
+    nombre?:string; // El simbolo de pregunta (?) puesto despues del atributo o propiedad significa que este atributo es opcional
     apellido:string;
     edad:number;
     direccion:string;
@@ -33,16 +33,17 @@ var licencia1:LicenciaConducir={
 
 
 // Una vez definido la interface podemos crear una variable o un objeto del tipo de la interface que creamos y ese obejto podra tener los atributos de la interface que definimos anteriormenete, el obejto que es del tipop de una interface debe tener todos los atributos de esa interface para que no haya errores
-let persona:Persona = {
+let persona1:Persona = {
     nombre:"Juan", 
     apellido:"Perez", 
     edad:25, 
-    direccion:"Calle 123"
+    direccion:"Calle 123",
+    mascotas:["Mickey","Toby"]
 }
 
 
 //Herencia de Interfaces
-// Tambien podemos crear una intergace la cual se extienda o tenda los atributos de otra interface de la interface
+// Tambien podemos crear una intergace la cual se extienda o tenga los atributos de otra interface de la interface
 interface Cedula extends Persona{ // Esta interface hereda los atributos de la interface Persona esto quiere decir que si creamos un objeto de esta interface tendra que tener los atributos de la interface Persona y los atributos de esta otra interface
     ci:string
 }
@@ -53,6 +54,7 @@ let cedula1:Cedula = {
     apellido:"Fuertes",
     edad:25,
     direccion:"El Triangulo",
+    mascotas:["Mickey","Toby"]
 }
 
 
@@ -65,7 +67,8 @@ let cedula1:Cedula = {
             nombre:"Juan",
             apellido:"Perez",
             edad:25,
-            direccion:"Calle 123"
+            direccion:"Calle 123",
+            
         },
         {
             nombre:"Pedro",
@@ -84,8 +87,8 @@ personas.forEach(x => {
     
 })
 
-for(let item in persona){
-    console.log("Los valores del objeto persona son: "+persona[item])
+for(let item in persona1){
+    console.log("Los valores del objeto persona son: "+persona1[item])
 }
 
 for(let item of personas){ // el for of es usado para recorrer un arreglo de obejtos unicamente y no se deja usar para recorrer un solo objeto

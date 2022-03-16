@@ -1,15 +1,17 @@
 // instanceof es una palabra clave de JavaScript que hereda TypeScript que permite comprobar si un objeto es de una clase concreta.
 // Utilice instanceof cuando necesite confirmar el tipo de un objeto
 class Animal{
-especie:string;
-readonly dieta:string; // la prefijo readonly establece que esa variable o funcion solo es de lectura no se la puede modificar o asignar otro valor 
-cantidadPatas:number;
+    especie:string;
+    readonly dieta:string; // la prefijo readonly establece que esa variable o funcion solo es de lectura no se la puede modificar o asignar otro valor 
+    cantidadPatas:number;
 
-constructor(especie:string, dieta:string, cantidadPatas){
-    this.especie=especie;
-    this.dieta=dieta;
-    this.cantidadPatas=cantidadPatas;
+    constructor(especie:string, dieta:string, cantidadPatas){
+        this.especie=especie;
+        this.dieta=dieta;
+        this.cantidadPatas=cantidadPatas;
     }
+
+    
     comprobarEspecieDieta(){
         console.log("La especie es: "+this.especie+" y es "+this.dieta)
     }
